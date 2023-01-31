@@ -11,7 +11,12 @@ function showPecent() {
    let pecentOfYears = Number(document.getElementById('valuePecent').value);
    let timeInt = Number(document.getElementById('valueInterval').value);
    let xx;
-   xx = (summa1 * (pecentOfYears / 100)) / 365;
-
-   return document.getElementById('resultSumm').innerHTML = (xx * timeInt);
+   let xxx;
+   xxx = ((summa1 * (pecentOfYears / 100)) / 365) * timeInt;
+   if (isNaN(xxx)) {
+      xx = "Пожалуйста введите цифры";
+   } else {
+      xx = xxx;
+   } 
+   return document.getElementById('resultSumm').innerHTML = xx;
 }
