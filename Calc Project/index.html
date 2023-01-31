@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="style/style.css" type="text/css"/>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Calc</title>
+</head>
+<body>
+   <div class="wrapper">
+      <div class="calc">
+         <div class="title">
+            <p class="title">
+               Калькулятор
+            </p>
+         </div>
+        <div class="input">
+            <input type="text" id="num1" class="input__num num1" value placeholder="Enter number"/>
+        </div>
+        <div class="method" id="operator__btns">
+            <button class="method__btns method__plus" id="plus" onclick="plus()"><span>+</span></button>
+            <button class="method__btns method__minus" id="minus" onclick="minus()"><span>-</span></button>
+            <button class="method__btns method__times" id="times" onclick="times()"><span>*</span></button>
+            <button class="method__btns method__devide" id="devide" onclick="devide()"><span>/</span></button>
+         </div>
+         <div class="input">
+            <input type="text" id="num2" class="input__num num2" value placeholder="Enter number"/>
+         </div>
+         <div class="action">
+            <button class="action__btn" onclick="method()">Посчитать</button>
+         </div>
+         <div class="result">
+            <p class="result__value" id="result" ></p>
+         </div>
+      </div>
+   </div>
+   <script src="js/script.js"></script>
+</body>
+</html>

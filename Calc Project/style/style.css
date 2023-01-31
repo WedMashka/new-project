@@ -1,0 +1,189 @@
+@import url(../style/zero.css);
+
+body{
+   color: rgb(0, 238, 255);
+   font-size: 16px;
+}
+.wrapper {
+   min-width: 100%;
+   min-height: 100%;
+   background-color: black;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.calc {
+   padding: 50px;
+   border-radius: 20px;
+   box-shadow: 0px 0px 1px 0px rgb(0, 238, 255);
+}
+.calc:hover{
+   box-shadow: 0px 0px 3px 0px rgb(0, 238, 255), 0px 0px 1px 0px rgb(0, 238, 255) inset;
+}
+
+.title{
+   color: #00eeff;
+   font-size: 30px;
+   text-align: center;
+   margin: 0px 0px 50px 0px;
+}
+.input {
+   height: 50px;
+   width: 300px;
+   margin: 25px 0px;
+}
+
+.input__num {
+   text-align: center;
+   padding: 0px 15px;
+   color: rgb(0, 238, 255);
+   font-size: 24px;
+   background-color: black;
+   border-radius: 10px;
+   width: 100%;
+   height: 100%;
+   box-shadow: 0px 0px 5px 0px rgb(0, 238, 255);
+}
+.input__num:focus{
+   box-shadow: 0px 0px 10px 0px rgb(0, 238, 255);
+}
+.input__num:hover {
+   box-shadow: 0px 0px 10px 0px rgb(0, 238, 255);
+}
+
+.num1 {}
+
+.method {
+   width: 300px;
+   height: 50px;
+   display: flex;
+   justify-content: space-between;
+   position: relative;
+}
+
+.method__btns {
+   color: rgb(0, 238, 255);
+   font-size: 24px;
+   width: 50px;
+   height: 50px;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 10px;
+   transition: 4s;
+}
+
+.method__btns span{
+   left: 0;
+   top: 0;
+   position: absolute;
+   background: black;
+   z-index: 2;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 10px;
+}
+
+.method__btns:after, .method__btns:before{
+content: '';
+transition: 0.3s;
+top: 0;
+left: 0;
+background:linear-gradient(135deg,rgb(0, 238, 255), #00eeff, black, rgb(0, 26, 255), rgb(0, 26, 255) );
+position: absolute;
+z-index: 1;
+border-radius: 10px;
+}
+
+.method__btns:after{
+   inset: -1px;
+}
+
+
+.method__btns:hover::after {
+   inset: -1px;
+   filter: blur(5px);
+}
+
+.method__btns:active::after {
+   inset: -1px;
+   filter: blur(5px);
+   background: linear-gradient(-45deg, rgb(0, 238, 255), #00eeff, black, rgb(0, 26, 255), rgb(0, 26, 255));
+}
+
+.method__btns:hover::before {
+   inset: -1px;
+}
+
+.method__btns:focus::after {
+   inset: -1px;
+   filter: blur(7px);
+   background: linear-gradient(-45deg, rgb(0, 238, 255), #00eeff, black, rgb(0, 26, 255), rgb(0, 26, 255));
+}
+
+.method__btns:focus::before {
+   inset: -1px;
+}
+
+
+.method__plus {}
+
+.method__minus {}
+
+.method__times {}
+
+.method__devide {}
+
+.num2 {}
+
+.action {
+   width: 300px;
+   height: 50px;
+}
+
+.action__btn {
+   color: rgb(0, 238, 255);
+   background: black;
+   font-size: 24px;
+   width: 100%;
+   height: 100%;
+   border-radius: 10px;
+   box-shadow: 0px 0px 5px 0px rgb(0, 238, 255);
+}
+.action__btn:hover{
+   box-shadow: 0px 0px 10px 0px rgb(0, 238, 255);
+}
+.action__btn:focus {
+   box-shadow: 0px 0px 10px 0px rgb(0, 238, 255);
+}
+.result {
+   margin: 25px 0px;
+   width: 300px;
+   height: 50px;
+}
+
+.result__value {
+   color: rgb(0, 238, 255);
+   background: black;
+   font-size: 24px;
+   width: 100%;
+   height: 100%;
+   border-radius: 10px;
+   box-shadow: 0px 0px 5px 0px rgb(0, 238, 255);
+   text-align: center;
+   padding: 10px 0px;
+}
+
+.result__value:hover {
+   box-shadow: 0px 0px 10px 0px rgb(0, 238, 255);
+}
+
+.result__value:focus {
+   box-shadow: 0px 0px 10px 0px rgb(0, 238, 255);
+}

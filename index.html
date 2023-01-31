@@ -1,98 +1,71 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="css/style.css">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Шаблон</title>
+   <link rel="stylesheet" href="style/style.css" type="text/css"/>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
 </head>
 <body>
-	<div class="wrapper">
-		<header class="header">
-			<div class="header__container">
-				<a href="" class="heder__logo"></a>
-				<div class="heder__menu menu">
-					<div class="menu__icon">
-						<span></span>
-					</div>
-					<nav class="menu__body">
-						<ul class="menu__list">
-							<li>
-								<a data-goto=".page__section1" href="#" class="menu__link">Part 1</a>
-							</li>
-							<li>
-								<a data-goto=".page__section2" href="#" class="menu__link">Part 2</a>
-							</li>
-							<li>
-								<a data-goto=".page__section3" href="#" class="menu__link">Part 3</a>
-							</li>
-							<li>
-								<a href="#" class="menu__link">Some page</a>
-								<span class="menu__arrow"></span>
-								<ul class="menu__sub-list">
-									<li>
-										<a href="#" class="menu__sub-link">Sub Part 1</a>
-									</li>
-									<li>
-										<a href="#" class="menu__sub-link">Sub Part 2</a>
-									</li>
-									<li>
-										<a href="#" class="menu__sub-link">Sub Part 3</a>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a   href="#" class="menu__link">Part 4</a>
-							</li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</header>
-		<main class="page">
-			<section class="page__section page__section1">
-				<h1 class="page__title">
-					Good text
-				</h1>
-				<div class="page__text">
-					<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam consequatur deleniti veniam, nam molestias officia. Aut nostrum eligendi, fugiat voluptate molestias necessitatibus dolores cupiditate at corporis porro incidunt repudiandae obcaecati. </p>
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, hic esse quod perferendis voluptate  nulla a eaque maiores vitae nisi!</p>
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, hic esse quod perferendis voluptate tem harum porro labore distinctio ut quam velit explicabo nulla a eaque maiores vitae nisi!</p>
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, hic esse quod perferendis voluptate saepe voluptatem harum porro labore distinctio ut quam velit explicabo nulla a eaque maiores vitae nisi!</p>
-				</div>
-			</section>
-			<section class="page__section page__section2">
-				<h1 class="page__sub-title">
-					Good text2
-				</h1>
-				<div class="page__text">
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, hic esse quod perferendis voluptate saepe
-						voluptatem harum porro labore distinctio ut quam velit explicabo nulla a eaque maiores vitae nisi!</p>
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, hic esse quod perferendis voluptate saepe
-						voluptatem harum porro labore distinctio ut quam velit explicabo nulla a eaque maiores vitae nisi!</p>
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, hic esse quod perferendis voluptate saepe
-						voluptatem harum porro labore distinctio ut quam velit explicabo nulla a eaque maiores vitae nisi!</p>
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, hic esse quod perferendis voluptate saepe
-						voluptatem harum porro labore distinctio ut quam velit explicabo nulla a eaque maiores vitae nisi!</p>
-				</div>
-			</section>
-			<section class="page__section page__section3">
-				<h1 class="page__sub-title">
-					Good text3
-				</h1>
-				<div class="page__text">
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, hic esse quod perferendis voluptate saepe
-						voluptatem harum porro labore distinctio ut quam velit explicabo nulla a eaque maiores vitae nisi!</p>
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, hic esse quod perferendis voluptate saepe
-						voluptatem harum porro labore distinctio ut quam velit explicabo nulla a eaque maiores vitae nisi!</p>
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, hic esse quod perferendis voluptate saepe
-						voluptatem harum porro labore distinctio ut quam velit explicabo nulla a eaque maiores vitae nisi!</p>
-					<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, hic esse quod perferendis voluptate saepe
-						voluptatem harum porro labore distinctio ut quam velit explicabo nulla a eaque maiores vitae nisi!</p>
-				</div>
-			</section>
-		</main>
-	</div>
-	<script src="js/script.js"></script>
+   <div class="wrapper">
+      <button id="button1" class="button" onclick="newUser()"><span> New User </span></button>
+      <button id="button2" class="button" onclick="showUser()"><span>show User</span></button>
+      <button id="button3" class="button" onclick="showName()"><span>show User name</span></button>
+      <button id="button4" class="button" onclick="showAge()"><span>show age</span></button>
+      <button id="button5" class="button" onclick="showSity()"><span>show User sity</span></button>
+      <p class="result" id="result">
+      </p>
+      <div class="calc__pecent">
+         <div class="value__summ value">
+            <input type="text" id="valueSumm" class="value-input value__item" placeholder="Enter summ"/>
+         </div>
+         <div class="value__pecent value">
+            <input type="text" id="valuePecent" class="value-input value__item" placeholder="Enter pecent of years" />
+         </div>
+         <div class="value__interval value">
+            <input type="text" id="valueInterval" class="value-input value__item" placeholder="Enter number  of days" />
+         </div>
+         <div class="value__button value">
+            <button class="buttom__count value__item" onclick="showPecent()"><span>Count</span></button>
+         </div>
+         <div class="value__result value">
+            <p class="result__summ value__item" id="resultSumm"> </p>
+         </div>
+      </div>
+      <div class="form__name">
+         <div class="full__name">
+            <input type="text" placeholder="Enter full name" id="fullName"/>
+         </div>
+         <div class="full__name-button">
+            <button onclick="distribute()">Distribute</button>
+         </div>
+         <div class="full__name-name full__name">
+           <div class="full__name-div">
+               <p>Name</p>
+            </div>
+            <p class="full__name-result" id="nameName"></p>
+         </div>
+         <div class="full__name-surname full__name">
+            <div class="full__name-div">
+               <p>Surname</p>
+            </div> 
+            <p class="full__name-result" id="Surname"></p>
+         </div>
+         <div class="full__name-patronymic full__name">
+            <div class="full__name-div">
+               <p>Patronymic</p>
+            </div>
+            <p class="full__name-result" id="Patronymic"></p>
+         </div>
+         <div class="full__name-reduction full__name">
+            <div class="full__name-div">
+               <p>Reduction</p>
+            </div>
+            <p class="full__name-result" id="reduction"></p>
+         </div>
+      </div>
+   </div>
+   <script src="js/script.js"></script>
 </body>
 </html>
