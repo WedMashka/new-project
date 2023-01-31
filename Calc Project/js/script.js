@@ -16,6 +16,7 @@ function devide() {
 }
 
 function method() {
+   let x;
    let num1 = Number(document.getElementById('num1').value);
    let num2 = Number(document.getElementById('num2').value);
    switch (op) {
@@ -32,6 +33,13 @@ function method() {
          preResult = num1 / num2;
          break;
    }
-   result = preResult.toFixed(10);
+
+   x = preResult.toFixed(10);
+   if (isNaN(x)) {
+      result = 'пожалуйста введите число';
+   } else {
+      result = x;
+   }
    return document.getElementById('result').innerHTML = result;
+   
 }
