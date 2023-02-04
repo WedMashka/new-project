@@ -596,5 +596,4 @@ let map = new Map();
 map.set('1', 'str');
 map.set(1, 'num1');
 map.set(true, 'bool1');
-
 s(map);
