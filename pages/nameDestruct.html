@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <link rel="stylesheet" href="../style/nameDesrtuct.css" type="text/css"/>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Преобразователь имени</title>
+</head>
+<body>
+   <div class="wrapper">
+      <div class="form__name">
+         <div class="full__name">
+            <input type="text" placeholder="Введите фамилию имя отчество" id="fullName" />
+         </div>
+         <div class="full__name-button">
+            <button onclick="distribute()">Преобразовать</button>
+         </div>
+         <div class="full__name-name full__name">
+            <div class="full__name-div">
+               <p>Имя</p>
+            </div>
+            <p class="full__name-result" id="nameName"></p>
+         </div>
+         <div class="full__name-surname full__name">
+            <div class="full__name-div">
+               <p>Фамилия</p>
+            </div>
+            <p class="full__name-result" id="Surname"></p>
+         </div>
+         <div class="full__name-patronymic full__name">
+            <div class="full__name-div">
+               <p>Отчество</p>
+            </div>
+            <p class="full__name-result" id="Patronymic"></p>
+         </div>
+         <div class="full__name-reduction full__name">
+            <div class="full__name-div">
+               <p>ФИО</p>
+            </div>
+            <p class="full__name-result" id="reduction"></p>
+         </div>
+      </div>
+   </div>
+   <script src="../js/nameDestruct.js"></script>
+</body>
+</html>
