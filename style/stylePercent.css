@@ -14,12 +14,12 @@ height: 100%;
 }
 
 .calc__pecent {
+   padding: 20px;
    display: flex;
    align-items: center;
    justify-content: center;
-   margin: 50px;
    flex-direction: column;
-   width: 500px;
+   max-width: 500px;
    border-radius: 20px;
    box-shadow: 0px 0px 5px 0px rgb(0, 170, 255);
 }
@@ -49,4 +49,32 @@ justify-content: center;
    border-radius: 10px;
    box-shadow: 0px 0px 5px 0px rgb(0, 170, 255);
    background-color: black;
+}
+
+/*--------Адаптив для экрана менее 400пкс----------*/
+@media(max-width: 450px){
+   
+      .calc__pecent {
+         margin: 20px 5px;
+         max-width: 300px;
+         border-radius: 10px;
+      }
+   
+      .title {
+         font-size: 16px;
+         margin: 15px 0px 0px 0px;
+      }
+   
+      .value {
+         width: 200px;
+         height: 30px;
+         margin: 15px 0px;
+      }
+   
+      .value__item {
+         padding: 4px 0px 0px 0px;
+         width: 200px;
+         height: 30px;
+         font-size: 16px;
+      }
 }

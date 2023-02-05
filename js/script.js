@@ -16,6 +16,16 @@ function showPecent() {
    return document.getElementById('resultSumm').innerHTML = (xx * timeInt);
 }
 
+function showAboutMe() {
+   let x = document.getElementById('aboutAdmin');
+   if (x.classList.contains('about__admin')) {
+      x.classList.remove('about__admin');
+      x.classList.toggle('hidden__box');
+   } else {
+      x.classList.remove('hidden__box');
+      x.classList.toggle('about__admin');
+   }
+}
 /*
 let x;
 let y;
@@ -592,8 +602,3 @@ while (true) {
    s(result.value);
 }
 */
-let map = new Map();
-map.set('1', 'str');
-map.set(1, 'num1');
-map.set(true, 'bool1');
-s(map);
