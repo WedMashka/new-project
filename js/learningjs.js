@@ -264,31 +264,6 @@ for (let prop of document.body.childNodes) {
    s(prop);
 };
    */
-let t = 1;
-let t2 = 1;
 
-function changeBackground() {
-   let x = document.getElementById('test__box');
-   if (t % 2 == 0) {
-      x.style.background = '';
-      t++;
-      sh(t);
-   } else
-      {
-      x.style.background = 'black';
-      t++;
-      sh(t);
-   }
-}
-function changeFontSize() {
-   let x = document.querySelector('body > div');
-   if (t2 % 2 == 0) {
-      x.style.background = '';
-      t2++;
-      sh(t2);
-   } else {
-      x.style.background = 'green';
-      t2++;
-      sh(t2);
-   }
-}
+
+

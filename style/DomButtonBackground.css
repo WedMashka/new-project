@@ -1,7 +1,8 @@
 @import url(../style/zero.css);
+
 html,
 body {
-   
+
    background-color: black;
    font-size: 20px;
    margin: 0 auto;
@@ -9,7 +10,9 @@ body {
    width: 100%;
    min-height: 100%;
 }
-button, input{
+
+button,
+input {
    text-align: center;
    background-color: black;
    font-size: 20px;
@@ -33,7 +36,7 @@ button, input{
    transition: all 2.5s ease;
 }
 
-.wrapper > div {
+.wrapper>div {
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -44,8 +47,4 @@ button, input{
    background: rgb(28, 21, 21);
    padding: 20px;
    transition: all 2.5s ease;
-}
-
-.result {
-   text-align: center;
 }
