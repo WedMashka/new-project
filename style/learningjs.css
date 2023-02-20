@@ -1,4 +1,7 @@
 @import url(../style/zero.css);
+*{
+   transition: all 2.5s ease;
+}
 html,
 body {
    
@@ -14,7 +17,6 @@ button, input{
    background-color: black;
    font-size: 20px;
    color: rgb(255, 187, 0);
-   text-transform: uppercase;
    width: 300px;
    height: 50px;
    margin: 40px 0px;
@@ -30,7 +32,6 @@ button, input{
    align-items: center;
    justify-content: center;
    flex-direction: column;
-   transition: all 2.5s ease;
 }
 
 .wrapper > div {
@@ -43,9 +44,29 @@ button, input{
    margin: 30px 0px;
    background: rgb(28, 21, 21);
    padding: 20px;
-   transition: all 2.5s ease;
 }
+.test__box{
+ display: flex;
+   flex-direction: column;
+   align-items: center;
+   max-width: 1200px;
+   min-height: 300px;
+   box-shadow: 0px 0px 3px 1px rgb(255, 3, 213);
+   margin: 30px 0px;
+   background: rgb(28, 21, 21);
+   padding: 20px;
 
+}
+.result__box{
+   max-width: 400px;
+   max-height: 200px;
+   border: 20px rgb(132, 81, 0) solid;
+}
 .result {
+   overflow: auto;
+   color: rgb(255, 187, 0);
+   max-width: 400px;
+   max-height: 200px;
+   margin: 30px 0px;
    text-align: center;
 }
