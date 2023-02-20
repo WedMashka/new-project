@@ -23,6 +23,7 @@ function multiplicationData(x, n) {
 };
 
 function multiplicationData1() {
+   document.getElementById('pageSectionValue').innerHTML = '';
    let inputValueX = Number(document.getElementById('inputValueX').value);
    let inputValueN = Number(document.getElementById('inputValueN').value);
    let x = inputValueX;
@@ -32,15 +33,18 @@ function multiplicationData1() {
 
 
 
-/**********Функция удаления ранее созданного резулт=ьтата.*** */
+/**********Функция скрытия ранее созданного резулт=ьтата.*** */
 
 
-function delResult() {
-   document.getElementById('pageSectionValue').innerHTML = '';
-}
-function deliteEtim() {
+
+function hiddenEtim() {
    let show = document.getElementById('pageSectionValue');
    show.style.opacity = '';
    show.style.visibility = 'hidden';
-   setTimeout(delResult, 2000);
 }; 
+
+let inputValueX = document.getElementById('inputValueX');
+let inputValueN = document.getElementById('inputValueN');
+
+inputValueX.oninput = hiddenEtim;
+inputValueN.oninput = hiddenEtim;
