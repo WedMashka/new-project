@@ -18,11 +18,11 @@ inputValue.addEventListener('input', function () {
    document.getElementById('result').textContent = this.value;
 });
 
-/*
+
 inputValue.addEventListener('input', function () {
    document.getElementById('result2').innerHTML = this.value;
 });
-*/
+
 /*
 
 let arr = ['ion', 'ivan', 'mary', 'valera',];
@@ -401,20 +401,211 @@ function multiplication(x, n) {
 };
 x = multiplication(2, 5);
 s(x);*/
+/*
+s(sumSalaries(company));
 
-function multiplicationData(x, n) {
-   if (x && n) {
-      if (x == (n + 1)) {
-         return console.log(`Ваша таблица умножения  до ${n}`);
-      } else {
-         for (let i = 1; i < 11; i++) {
-            let t;
-            t = x * i;
-            console.log(`${x} * ${i} = ${t}`);
-         }
-         return multiplicationData(x = x + 1, n);
-      }
-   }
+let company2 = {
+   sales: [
+      { name: 'john', salary: 1000 },
+      { name: 'Alice', salary: 600 },
+   ],
+};
+s(company2);
+s(Object.values(company2));
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+/**-------------Найти сумму элементов объекта---------------*/
+/*
+let company = {
+   sales: [
+      { name: 'john', salary: 1000 },
+      { name: 'Alice', salary: 600 },
+   ],
+   development: {
+      sites: [
+         { name: 'peter', salary: 2000 },
+         { name: 'Alex', salary: 1800 },
+      ],
+      internals: [
+         { name: 'jack', salary: 1300 },
+      ],
+   },
+
 };
 
-multiplicationData(1, 5);
+s(company);
+
+function sumSalaries(department) {
+   if (Array.isArray(department)) {
+      return department.reduce((prev, current) => prev + current.salary, 0);
+   } else {
+      let sum = 0;
+      for (let subdep of Object.values(department)) {
+         sum += sumSalaries(subdep);
+      }
+      return sum;
+   }
+};
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**-------Найти сумму элементов массива-------- */
+let someNumber = [1, 5, 9, 3, 7, 1, 8, 362, 8, 54, 6, 1];
+
+// Первый способ
+function sumArrow(ar) {
+   let sum = 0;
+   for (let i = 0; i < ar.length; i++){
+       sum += ar[i];
+   }
+   return console.log(sum);
+};
+
+sumArrow(someNumber);
+
+//Второй способ
+function sumArrow2(ar) {
+   let sum = 0;
+   ar.forEach((item, index, arr) => {
+      sum += item;
+   });
+   return console.log(sum);
+};
+
+sumArrow2(someNumber);
+// Третий способ
+function sumArrow3(ar) {
+   let sum = 0;
+   ar.map((item, index, arr) => {
+      sum += item;
+   });
+   return console.log(sum);
+};
+sumArrow3(someNumber);
+
+//Четвертый способ
+function sumArrow4(ar) {
+   let sum = 0;
+   for (let el of ar) {
+      sum += el;
+   };
+   return console.log(sum);
+};
+sumArrow4(someNumber);
+
+//Пятый способ
+function sumArrow5(ar) {
+   let sum = 0;
+   ar.reduce((prev, item) => {
+      return sum = prev + item;
+   })
+   console.log(sum);
+};
+
+sumArrow5(someNumber);
+
+//-Найти самый большой элемент и его позицию----- 
+// Найти позицию в массиве
+let someNumb = [1, 5, 9, 3, 7, 1, 8, 362, 8, 54, 6, 1];
+
+//первый способ
+function bigerNumb(ar) {
+   let biger = 0;
+   let position;
+   for (let i = 0; i < ar.length; i++){
+      ar[i];
+      if (ar[i] > biger) {
+         biger = ar[i];
+         position = i;
+      }
+   }
+   console.log(`самое большое число в массиве ${biger}, позиция  ${position}`);
+};
+
+bigerNumb(someNumb);
+
+//Второй способ
+function bigerNumb2(ar) {
+   let bigNum = 0;
+   let position;
+   ar.forEach((item, index, ar) => {
+      if (item > bigNum) {
+         bigNum = item;
+         position = index;
+      }
+   });
+   console.log(`самое большое число в массиве ${bigNum}, позиция  ${position}`);
+};
+bigerNumb2(someNumb);
+
+//третий способ
+function bigerNumb3(ar) {
+   let bigNum = 0;
+   let position;
+   ar.map((item, index, arr) => {
+      if (item > bigNum) {
+         bigNum = item;
+         position = index;
+      }
+   });
+   return console.log(`самое большое число в массиве ${bigNum}, позиция  ${position}`);
+};
+bigerNumb3(someNumb);
+
+//Четвертый способ
+function bigerNumb4(ar) {
+   let bigNum = 0;
+   let position;
+   for (let el of ar) {
+      if (el > bigNum) {
+         bigNum = el;
+         position = ar.indexOf(bigNum);
+      }
+   };
+   return console.log(`самое большое число в массиве ${bigNum}, позиция  ${position}`);
+};
+bigerNumb4(someNumb);
+
+//Пятый способ
+
+function bigerNumb5(ar) {
+      let b = ar.reduce((prev, item, index) => {
+         if (item>prev[1]) {
+            return [index, item];
+         }
+         else {
+            return  prev;
+         }
+      }, [0, ar[0]]);
+   return   console.log(`самое большое число в массиве ${b[1]}, позиция  ${b[0]}`);
+}
+bigerNumb5(someNumb);
+
+
+

@@ -65,8 +65,6 @@ button, input{
 .result {
    overflow: auto;
    color: rgb(255, 187, 0);
-   max-width: 400px;
-   max-height: 200px;
    margin: 30px 0px;
    text-align: center;
 }
