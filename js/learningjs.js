@@ -1,9 +1,11 @@
 "use strict"
 /*  -----выводит в консоль ------*/
+
 function s(x) {
    console.log(x);
+   s.count++;
 }
-
+s.count = 0;
 function sh(r) {
    let result = r;
    return document.getElementById('result').textContent = result;
@@ -476,6 +478,8 @@ function sumSalaries(department) {
 
 
 /**-------Найти сумму элементов массива-------- */
+
+/*
 let someNumber = [1, 5, 9, 3, 7, 1, 8, 362, 8, 54, 6, 1];
 
 // Первый способ
@@ -606,6 +610,402 @@ function bigerNumb5(ar) {
    return   console.log(`самое большое число в массиве ${b[1]}, позиция  ${b[0]}`);
 }
 bigerNumb5(someNumb);
+*/
 
 
+
+/*
+
+let ar = [2, 2, 2, -5, 6, 9, -7, 1000, 1];
+function sumAll(...args) {
+   let sum = 0;
+   for (let arg of args) sum += arg;
+   return console.log(sum);
+}
+sumAll(...ar);
+sumAll(1, 2, 5, 8, 25, 9);
+
+function showName(firstName, lastName, ...titles) {
+   console.log(firstName + ' ' + lastName);
+   console.log(titles);
+
+}
+
+showName('иона', 'Кузнецов', 'lanos','dubovka'
+)
+*/
+
+/*
+let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+
+
+
+function oneSrt(a23) {
+   let arro = [];
+   for (let i = 0; i < a23.length; i++) {
+      arro.push(...a23[i]);
+   }
+   return console.log(arro);
+}
+oneSrt(arr);
+*/
+/*
+let usName = 'iona';
+function sayHi() {
+   console.log(`Hellow     ${usName}`);
+ }
+sayHi();
+usName = 'io';
+sayHi();
+*/
+
+/*
+function makeWorker() {
+   let name1 = 'kirill';
+   return function () {
+      console.log(name1);
+   };
+}
+
+makeWorker();
+let name1 = 'kira';
+let work = makeWorker();
+work();
+*/
+
+
+
+
+
+
+/*
+function makeCountner() {
+   let count = 0;
+   return function () {
+      return console.log(count++);
+   };
+}
+let cou = makeCountner();
+let count1 = makeCountner();
+count1();
+cou();
+cou();
+cou();
+cou();
+count1();
+makeCountner();
+makeCountner();
+function f() {
+   let valueF = Math.random();
+   return function () {
+      console.log(valueF);
+   };
+}
+let t = f();
+t();
+let arrr = [f(), f(), f()];
+let p = arrr[0];
+p();
+arrr[2]();
+arrr[2]();
+arrr[2]();
+*/
+
+
+/*
+window.current5User = {
+   name: 'iona',
+};
+s(current5User);
+
+s(s.count);
+let sayHi = function func(who) {
+   if (who) {
+      s(`Hellow ${who}`);
+   } else {
+      func('Guest');
+   }
+};
+s(s.count);
+sayHi();
+sayHi('iona');
+s(s.count);
+setTimeout(s, 2000, 'ion');
+
+*/
+
+
+
+
+
+/*
+let user = {
+   name: 'iona',
+   age: 25,
+};
+s(user);
+
+let descriptor = Object.getOwnPropertyDescriptor(user, 'name');
+s(descriptor);
+s(JSON.stringify(descriptor));
+
+Object.defineProperty(user, "name", {
+   writable: false,
+   enumerable: false,
+   configurable: false,
+});
+let descriptor1 = Object.getOwnPropertyDescriptor(user, 'name');
+s(descriptor1);
+s(user);
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+let user = {
+   name: 'iona',
+   surname: 'Smith',
+   fullName1: function () {
+      return `${this.name} ${this.surname}`;
+   },
+
+   get fullName() {
+      return `${this.name} ${this.surname}`;
+   },
+   set fullName(value) {
+      [this.name, this.surname] = value.split(' ');
+   }
+};
+s(user);
+s(user.fullName);
+s(user.fullName1());
+user.fullName = 'ivan Kuznetsov';
+s(user);
+s(user.fullName);
+s(user.fullName1());
+
+let user1 = {};
+
+Object.defineProperty(user1, 'fullName', {
+   get() {
+      return `${this.name} ${this.surname} -  ${this.other}`;
+   },
+   set(value) {
+      if (value.length < 4) {
+         console.log('Name is too short')
+         return '';
+      } else {
+         [this.name, this.surname, ...this.other] = value.split(' ');
+      }
+   }
+})
+
+
+s(user1);
+user1.fullName = 'iona smith dubovka lanos acer';
+s(user1);
+s(user1.other);
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+let t = new Date('1991, 01, 09');
+let t5 = t.getTime();
+s(t);
+s(t5);
+
+
+function User(name, birthday, ...other) {
+   let t = birthday
+   let t1 = new Date(t);
+   let t2 = new Date;
+   let t3;
+   t3 = t2 - t1.getTime();
+   let t4;
+   t4 = t3 / (3600000 * 365.25 * 24);
+   let t5;
+   t5 = t4.toFixed(0);
+   this.name = name;
+   this.age = Number(t5);
+   this.birthday = t1;
+   this.other = other;
+};
+let valera = new User('valera', '2013 10 15', 'is cat', 'gray');
+s(valera);
+s(valera.other);
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------Объктно ориентированое программирование*/
+
+
+
+/*
+class User{
+   constructor(name, birthday,...other) {
+      this.name = name;
+      this.birthday = birthday;
+      this.other = other;
+   }
+   age(birthday) {
+      let t = this.birthday;
+      let t1 = new Date(t);
+      let t2 = new Date;
+      let t3;
+      t3 = t2 - t1.getTime();
+      let t4;
+      t4 = t3 / (3600000 * 365.25 * 24);
+      let t5;
+      t5 = t4.toFixed(0);
+      this.age = Number(t5);
+      this.birthday = t1;
+      console.log(t5);
+   }
+};
+class Dreamer extends User{
+   constructor(name, birthday, dream, ...other) {
+      super(name, birthday,other);
+      this.dream = dream
+   }
+};
+class Children extends User{
+   kindergarden() {
+      return console.log(`Goes to kindergadte`);
+   }
+}
+let ivan = new Children('ivan', '2019 08 26', 'Las Vegass', 'Volgograd', '18 kindergarten');
+ivan.age();
+ivan.kindergarden();
+let iona = new Dreamer('iona', '1991 01 09', 'Florida', 'Volgograd', 'Lanos' );
+s(iona.other);
+iona.age();
+let masha = new User('Mariya', '1988 12 30', 'Volgograd', 'archaeologist');
+masha.age();
+s(masha.other); 
+
+*/
+class Article {
+   constructor(title, date) {
+      this.title = title;
+      this.date = date;
+   }
+   static compare(articleA, articleB) {
+      return articleA.date - articleB.date;
+   }
+}
+
+let articles = [
+   new Article('HTML', new Date(2022, 1, 25)),
+   new Article('Css', new Date(2022, 1, 25)),
+   new Article('JS', new Date(2022, 2, 24)),
+];
+s(articles[0].title);
+s(articles[0].date);
+articles.sort(Article.compare);
+s(articles[0].title);
+s(articles[1].title);
+s(articles[2].title);
 
