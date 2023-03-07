@@ -987,6 +987,7 @@ masha.age();
 s(masha.other); 
 
 */
+/*
 class Article {
    constructor(title, date) {
       this.title = title;
@@ -1009,3 +1010,165 @@ s(articles[0].title);
 s(articles[1].title);
 s(articles[2].title);
 
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Защищенное свойство в классе объекте */
+/*
+
+class CoffeeMachine {
+   _waterAmount = 0;
+   set waterAmount(value) {
+      if (value < 0) {
+         throw new Error('Negative amound of water');
+      }
+      this._waterAmount = value;
+   }
+   get waterAmount() {
+      return this._waterAmount;
+   }
+   constructor(power){
+      this._power = power;
+   }
+   get power() {
+      return this._power;
+   }
+}
+let coffeeMaker = new CoffeeMachine(100);
+coffeeMaker.waterAmount = 10;
+//coffeeMaker.waterAmount = -10;
+s(coffeeMaker);
+//coffeeMaker.power = 300;
+s(coffeeMaker);
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+class User{
+   constructor() { }
+   setNameOnThisClass(name) {
+      this._name = name.trim().toLowerCase();
+   }
+}*/
+/*
+class User {
+   constructor() { }
+   set name(name) {
+      this._name = name.trim().toLowerCase();
+   }
+   get name() {
+      return this._name;
+   }
+}
+let student = new User();
+//student.setNameOnThisClass('Iona');
+s(student);
+student.name = 'Iona';
+s(student);
+*/
+
+
+
+/*
+s(this);
+document.querySelector('.b-1').onclick = function () {
+   s(this);
+   if (this.style.background == 'red') {
+      this.style.background = '';
+   } else {
+      this.style.background = 'red';
+   }
+}
+document.querySelector('.b-2').addEventListener('click', ff1);
+function ff1() {
+   s(this);
+   if (this.style.background == 'red') {
+      this.style.background = '';
+   } else {
+      this.style.background = 'red';
+   }
+}
+let h2 = document.querySelectorAll('h2');
+for (let i = 0; i < h2.length; i++) {
+   h2[i].onclick = ff1;
+}
+
+class U2{
+   constructor(model) {
+      this.model = model;
+   }
+}
+s(U2);
+
+let boat = new U2('744');
+s(boat);*/
+
+let b1 = document.querySelector('.b-1');
+let b2 = document.querySelector('.b-2');
+let b3 = document.querySelector('.b-3');
+
+function test(color) {
+   let x = color || 'orange';
+   if (this.style.background) {
+      this.style.background = '';
+   } else {
+      this.style.background = x;
+   }
+}
+function test1() {
+   if (this.style.background) {
+      this.style.background = '';
+   } else {
+      this.style.background = 'gray';
+   }
+}
+
+b2.onclick = function () {
+   test.call(b1,);
+}
+
+b1.onclick = test1;
+ 
+b3.onclick = function () {
+   test.apply(b1,['purple', 'yelow']);
+}

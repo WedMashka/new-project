@@ -1,0 +1,40 @@
+@import url(../style/zero.css);
+html,
+body {
+   min-height: 100%;
+}
+
+.wrapper{
+   margin: 0px auto;
+   width: 70%;
+   border: 18px orange solid;
+}
+.content {
+   border: 18px rgb(0, 255, 85) solid;
+}
+
+.title {
+   font-size: 36px;
+   text-align: center;
+   border: 18px rgb(64, 0, 255) solid;
+}
+
+.grid {
+   border: 18px rgb(255, 0, 0) solid;
+}
+
+.grid__body {
+   display: grid;
+   border: 18px rgb(108, 89, 54) solid;
+   /*grid-template-columns: 40% 20% 40%;*/
+   grid-template-columns:1fr minmax(150px, 2fr) 1fr;
+   /*grid-template-rows: 60% 40%;*/
+   grid-template-rows: 1fr 1fr;
+
+}
+
+.grid__body-item {
+   text-align: center;
+   border: 2px rgb(255, 0, 179) dashed;
+   padding: 30px;
+}
